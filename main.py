@@ -1,0 +1,25 @@
+def on_forever():
+    if input.button_is_pressed(Button.A):
+        for index in range(4):
+            led.plot(0, 0)
+            basic.pause(200)
+            led.plot(1, 1)
+            basic.pause(200)
+            led.plot(2, 2)
+            basic.pause(200)
+            led.plot(3, 3)
+            basic.pause(200)
+            led.plot(4, 4)
+            basic.pause(200)
+            led.unplot(0, 0)
+            basic.pause(200)
+            led.unplot(1, 1)
+            basic.pause(200)
+            led.unplot(2, 2)
+            basic.pause(200)
+            led.unplot(3, 3)
+            basic.pause(200)
+            led.unplot(4, 4)
+    else:
+        led.unplot(2, 2)
+basic.forever(on_forever)
